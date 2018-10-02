@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import grupos from '../api/grupos'
 import unidades from '../api/unidades'
+import {Link} from 'react-router-dom'
 
 class ListaGrupo extends Component {
 
@@ -33,6 +34,7 @@ class ListaGrupo extends Component {
             ))}
             </tbody>
         </table>
+        <div className="fixed-bottom rounded-circle bg-warning mx-auto my-1 px-0" style={{width:"55px",height:"55px"}}><Link to={"/"}><p className="text-light pt-3 pl-2 font-weight-bold">Voltar</p></Link></div>
       </div>
     );
   }
