@@ -7,12 +7,12 @@ class ListaGrupo extends Component {
 
     a = {}
 
-    buscaAlimento = (p) => {
+    buscaAlimento = (a) => {
   
         return (
           <tr>
-            <td>{p.alimento}</td>
-            <td>{p.porcao.map((p) => <p>{p.quantidade * this.props.match.params.quantidade} {p.unidade.map((u) => unidades.find((e) => (e.id === u)).descricao )}</p>)}</td>
+            <td>{a.alimento}</td>
+            <td>{a.porcao.map((p) => <p>{p.quantidade * this.props.match.params.quantidade} {p.unidade.map((u) => unidades.find((e) => (e.id === u)).descricao )}</p>)}</td>
           </tr>
         )
     }
@@ -29,7 +29,7 @@ class ListaGrupo extends Component {
             </thead>
             <tbody>
             
-            {grupos[this.props.match.params.id - 1].itens.map( a => (
+            {grupos[this.props.match.params.id].itens.map( a => (
                 this.buscaAlimento(a)
             ))}
             </tbody>

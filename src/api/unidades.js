@@ -42,7 +42,7 @@ const unidades =
 		},
 		{
 			"id": 8,
-			"sigla": "C SB CH",
+			"sigla": "C SB N",
 			"descricao": "Colher de Sobremesa Nivelada "
 		},
 		{
@@ -104,6 +104,36 @@ const unidades =
 			"id": 20,
 			"sigla": "pd",
 			"descricao": "Pedaço "
+		},
+		{
+			"id": 21,
+			"sigla": "rm",
+			"descricao": "Ramos "
+		},
+		{
+			"id": 22,
+			"sigla": "fl",
+			"descricao": "Folhas "
+		},
+		{
+			"id": 23,
+			"sigla": "cp",
+			"descricao": "Copos "
+		},
+		{
+			"id": 24,
+			"sigla": "bg",
+			"descricao": "Bagos "
+		},
+		{
+			"id": 25,
+			"sigla": "pt",
+			"descricao": "Potes "
+		},
+		{
+			"id": 26,
+			"sigla": "fle",
+			"descricao": "Filé "
 		}
 	]
 

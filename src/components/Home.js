@@ -7,7 +7,7 @@ class Home extends Component {
     return (
       <div className="">
         {this.props.dieta.map( r => (
-            <Refeicao key={r.id} className="my-2" refeicao={r.refeicao} nome={r.nome}/>
+            <Refeicao key={r.id} className="my-2" refeicao={r.refeicao} nome={r.nome} horario={r.horario}/>
         ))}
       </div>
     );

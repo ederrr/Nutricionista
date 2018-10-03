@@ -8,7 +8,7 @@ class Refeicao extends Component {
   a = {}
 
   buscaAlimento = (r) => {
-    this.a = grupos[0].itens.find((e) => (e.id === r.alimento))
+    this.a = grupos[r.grupo].itens.find((e) => (e.id === r.alimento))
 
       return (
         <tr className="border">
@@ -22,6 +22,7 @@ class Refeicao extends Component {
       return (
         <div className="bg-secondary border border-warning rounded my-2">
           <p className="text-warning h5 px-2 pt-1" >{this.props.nome}</p>
+          <p className="text-warning h5 px-2 pt-1" >{this.props.horario}</p>
           <table class="table bg-light mt-0">
               <thead>
                 <tr>
