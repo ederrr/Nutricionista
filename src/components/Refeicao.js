@@ -20,9 +20,9 @@ class Refeicao extends Component {
 
   render() {
       return (
-        <div className="bg-secondary border border-warning rounded my-2">
-          <p className="text-warning h5 px-2 pt-1" >{this.props.nome}</p>
-          <p className="text-warning h5 px-2 pt-1" >{this.props.horario}</p>
+        <div className={`bg-secondary border border-white rounded my-2`}>
+          <p className={`text-white h5 px-2 pt-1`} >{this.props.nome}</p>
+          <p className={`text-white h5 px-2 pt-1`} >{this.props.horario}</p>
           <table class="table bg-light mt-0">
               <thead>
                 <tr>

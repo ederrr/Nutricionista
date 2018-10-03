@@ -4,7 +4,7 @@ import Logo from './components/Logo'
 import Lista from './components/ListaGrupo'
 import Home from './components/Home'
 import dietaS from './api/dietaSemana'
-import dietaFds from './api/dietafds'
+import dietaFds from './api/dietaFds'
 import {Switch, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -13,17 +13,18 @@ class App extends Component {
     super(props);
     this.state = {
       frase: 'Semana',
-      dieta: dietaS    
+      dieta: dietaS, 
+      color: 'warning'   
     };
     this.inverte = this.inverte.bind(this);
   }
 
   inverte(){
     if(this.state.frase === 'Semana'){
-      this.setState({frase: 'Fim de Semana', dieta: dietaFds})
+      this.setState({frase: 'Fim de Semana', dieta: dietaFds, color: 'primary'})
     }
     else{
-      this.setState({frase: 'Semana', dieta: dietaS})
+      this.setState({frase: 'Semana', dieta: dietaS, color: 'warning'})
     }
   }
 
@@ -31,10 +32,10 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Logo frase={this.state.frase} inverte={this.inverte} />
+        <Logo frase={this.state.frase} inverte={this.inverte} color={this.state.color} />
         <Switch>
-        <Route exact path='/' render = {(props) => <Home {...props} dieta={this.state.dieta} />}/> 
-        <Route path='/List/:id/:quantidade' render = {(props) => <Lista {...props} />} />
+        <Route exact path='/' render = {(props) => <Home {...props} dieta={this.state.dieta} color={this.state.color} />}/> 
+        <Route path='/List/:id/:quantidade' render = {(props) => <Lista {...props} color={this.state.color} />} />
         </Switch>
       </div>
     );
