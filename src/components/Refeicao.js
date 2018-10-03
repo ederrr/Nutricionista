@@ -26,8 +26,8 @@ class Refeicao extends Component {
           <table class="table bg-light mt-0">
               <thead>
                 <tr>
-                  <th scope="col">Alimento</th>
-                  <th scope="col">Quantidade</th>
+                  <th scope="col" className="col w-50">Alimento</th>
+                  <th scope="col" className="col w-50">Quantidade</th>
                 </tr>
               </thead>
               <tbody>
